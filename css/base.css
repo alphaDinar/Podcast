@@ -35,6 +35,11 @@
     flex-direction: column;
 }
 
+body {
+  background: var(--var-bg);
+  transition: 0.4s ease;
+}
+
 h1{
   font-family: 'DessauProDrei', sans-serif;
   font-weight: 400;

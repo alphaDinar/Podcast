@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
-  <link rel="stylesheet" href="css/base.css">
-  <title>Document</title>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
     integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
   <title>Document</title>
 </head>
 
@@ -22,107 +22,29 @@
   <section class="page">
     <nav class="main_nav">
       <img src="images/logo.png" alt="" id="logo">
-
       <div class="toggle_dark_box" onclick="toggle_dark()">
-        <div>
-
-        </div>
+        <div></div>
       </div>
-      <script>
-        const toggle_dark_box = document.querySelector('.toggle_dark_box')
-        const toggle_button = toggle_dark_box.children[0]
-        sessionStorage.setItem('mode', 'dark')
-
-        const toggle_dark =()=>{
-          toggle_button.classList.toggle('change')
-          if(sessionStorage.getItem('mode') === 'dark'){
-            sessionStorage.setItem('mode', 'light')
-            document.documentElement.style.setProperty('--var-bg', 'white');
-            document.documentElement.style.setProperty('--var-color', 'black');
-          }else{
-            sessionStorage.setItem('mode', 'dark')
-            document.documentElement.style.setProperty('--var-bg', '#2f2f2f');
-            document.documentElement.style.setProperty('--var-color', 'white');
-          }
-        }
-      </script>
     </nav>
-    <style>
-      .toggle_dark_box{
-        width: 70px;
-        height: 30px;
-        border-radius: 40px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        border: 1px solid var(--var-theme);
-      }
-      .toggle_dark_box div{
-        position: absolute;
-        height: 20px;
-        width: 20px;
-        left: 5px;
-        transition: 0.4s ease;
-        background: var(--var-theme);
-        border-radius: 50%;
-      }
-      .toggle_dark_box div.change{
-        left: 45px;
-      }
 
-    </style>
-
-    <style>
-      #logo{
-        height: 60px;
-        object-fit: contain;
-        aspect-ratio: 4/3;
-      }
-    </style>
     <section class="top_box">
       <span>All Your Favourite Playlists On One Platform</span>
     </section>
-    <style>
-      .top_box{
-        width: 100%;
-        text-align: center;
-        /* display: flex; */
-        /* justify-content: center; */
-        /* text-align: center; */
-        color: var(--var-color);
-      }
-      .top_box span{
-        text-align: center;
-        letter-spacing: 2px;
-        font-weight: 600;
-        font-size: 3rem;
-      }
-    </style>
     <section class="head_box">
       <section class="left">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea necessitatibus ducimus tempora officiis! Porro magni error ratione. Tempora odit nam provident necessitatibus, a doloremque fugiat, debitis laboriosam aspernatur laudantium incidunt!</p>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea necessitatibus ducimus tempora officiis! Porro
+          magni error ratione.</p> -->
         <button><i class="material-symbols-outlined">play_arrow</i> Start Listening</button>
         <nav>
           <i class="fa-brands fa-google-play"></i>
           <i class="fa-brands fa-apple"></i>
         </nav>
       </section>
-      <style>
-        .head_box .left nav{
-          display: flex;
-          gap: 0 1.5rem;
-        }
-        .head_box .left nav i{
-          font-size: 3.5rem;
-          color: var(--var-color);
-        }
-      </style>
 
       <section class="mid">
         <div style="background-image: url(images/home1.avif);"></div>
       </section>
-      <section class="right">
+      <section class="right info_holder">
         <div class="info">
           <p>
             <span>3K+</span>
@@ -143,194 +65,24 @@
           <i class="fa-brands fa-instagram"></i>
         </nav>
       </section>
-      <style>
-        .head_box .right .info{
-          display: flex;
-          gap: 0.5rem;
-          flex-direction: column;
-          min-width: 30%;
-          padding: 10px 0;
-          border-bottom: 1px solid var(--var-color);
-        }
-        .head_box .right div p{
-          display: flex;
-          gap: 0.2rem;
-          flex-direction: column;
-          align-items: flex-end;
-          color: var(--var-color);
-        }
-        .head_box .right div p span{
-          font-size: 1.5rem;
-          display: flex;
-          align-items: center;
-          font-weight: 600;
-        }
-        .head_box .right nav{
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          color: var(--var-theme);
-        }
-        .head_box .right nav i{
-          font-size: 1.5rem;
-        }
-      </style>
     </section>
-    
+
     <section class="low_box">
       <section class="con">
         <h3>R&B Mix</h3>
         <p>8:30am - 12:30pm</p>
         <section class="player_bar">
+          <audio src="8 - Robbery - Death Race For Love - [SongsPk.CC].mp3" style="display: none;" muted></audio>
           <div class="progress">
-            <button></button>
+            <span></span>
           </div>
         </section>
+        <button class="material-symbols-outlined" id="play" onclick="togglePlay(event.target)">play_arrow</button>
       </section>
     </section>
-    <style>
-      .low_box{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 5vh;
-        background: var(--var-theme);
-      }
-      .low_box .con{
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-        color: white;
-        width: 50%;
-      }
-      .low_box .con h3{
-        display: flex;
-        align-items: center;
-        font-size: 1.2rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-      }
-      .low_box .con p{
-        letter-spacing: 0.5px;
-      }
-      .low_box .player_bar{
-        width: 100%;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        background: white;
-        position: relative;
-      }
-      .low_box .player_bar .progress{
-        height: 20px;
-        display: flex;
-        align-items: center;
-        position: absolute;
-        width: 40%;
-        background: wheat;
-      }
-      .low_box .player_bar .progress button{
-        position: absolute;
-        height: 25px;
-        width: 28px;
-        left: 100%;
-        background: #2f2f2f;
-      }
-    </style>
   </section>
 
-  <style>
-    .head_box{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .head_box .mid div{
-      height: 450px;
-      border-radius: 160px;
-      width: 300px;
-      transition: 0.3s ease;
-      background-position: center;
-      background-size: cover;
-    }
-    .head_box .left,.head_box .right{
-      width: 25%;
-      display: flex;
-      gap: 1.5rem;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .head_box .left{
-      align-items: flex-start;
-    }
-    .head_box .right{
-      align-items: flex-end;
-    }
-    .head_box .left p{
-      color: var(--var-color);
-    }
-    .head_box .left button{
-      background: var(--var-theme);
-      color: white;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    }
-  </style>
+  <script src="js/index.js"></script>
 </body>
-
-<style>
-  body{
-    background: var(--var-bg);
-    transition: 0.4s ease;
-  }
-  .main_nav,.top_box,.head_box,.low_box{
-    width: 90%;
-    padding: 1vh 5%;
-  }
-  .main_nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 5vh;
-  }
-
-  @media all and (max-width:1000px){
-    .head_box{
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .head_box .left,.head_box .right{
-      align-items: center;
-      text-align: center;
-      width: 90%;
-    }
-    .head_box .right .info{
-      align-items: center;
-    }
-    .head_box .right .info p{
-      align-items: center;
-    }
-    .head_box .mid div{
-      height: 350px;
-      border-radius: 160px;
-      width: 250px;
-      background-position: center;
-      background-size: cover;
-    }
-    .low_box .con{
-      width: 85%;
-    }
-  }
-  @media all and (max-width:500px){
-    .top_box span{
-      font-size: 6vw;
-    }
-  }
-</style>
 
 </html>
