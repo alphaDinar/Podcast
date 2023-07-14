@@ -39,10 +39,33 @@
           <i class="fa-brands fa-google-play"></i>
           <i class="fa-brands fa-apple"></i>
         </nav>
+
+        <script>
+          document.querySelectorAll('.head_box .left nav i').forEach((el,i)=>{
+            anime({
+              targets : el,
+              opacity : [0,1],
+              // rotate : '1turn',
+              translateX : [-30,0]
+              // scale : [0.1,1],
+            })
+          })
+        </script>
+
       </section>
 
       <section class="mid">
         <div style="background-image: url(images/home1.avif);"></div>
+
+        <script>
+          anime({
+            targets : '.head_box .mid div',
+            scale : [0.8,1],
+            duration : 300,
+            // easing : 'easeInOutExpo'
+            // rotate : [10,1],
+          })
+        </script>
       </section>
       <section class="right info_holder">
         <div class="info">
@@ -59,11 +82,26 @@
             <small>Dj's</small>
           </p>
         </div>
+
+        
+
         <nav>
           <i class="fa-brands fa-twitter"></i>
           <i class="fa-brands fa-youtube"></i>
           <i class="fa-brands fa-instagram"></i>
         </nav>
+
+        <script>
+          document.querySelectorAll('.info_holder nav i').forEach((el,i)=>{
+            anime({
+              targets : el,
+              delay : 100 * i,
+              duration : 1000,
+              opacity : [0,1],
+              translateX : [-30,0]
+            })
+          })
+        </script>
       </section>
     </section>
 
@@ -72,7 +110,7 @@
         <h3>R&B Mix</h3>
         <p>8:30am - 12:30pm</p>
         <section class="player_bar">
-          <audio src="8 - Robbery - Death Race For Love - [SongsPk.CC].mp3" style="display: none;" muted></audio>
+          <audio src="akon_sunny_day_feat_wyclef_jean_aac_19255.m4a" style="display: none;" muted></audio>
           <div class="progress">
             <span></span>
           </div>

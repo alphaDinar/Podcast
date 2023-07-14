@@ -1,6 +1,18 @@
 const toggle_dark_box = document.querySelector('.toggle_dark_box')
 const toggle_button = toggle_dark_box.children[0]
-sessionStorage.setItem('mode', 'dark')
+
+const setMode = () => {
+  if (sessionStorage.getItem('mode') === 'dark') {
+    console.log('Dark')
+    document.documentElement.style.setProperty('--var-bg', '#2f2f2f');
+    document.documentElement.style.setProperty('--var-color', 'white');
+  } else {
+    console.log('Light')
+    document.documentElement.style.setProperty('--var-bg', 'white');
+    document.documentElement.style.setProperty('--var-color', 'black');
+  }
+}
+setMode()
 
 const toggle_dark = () => {
   toggle_button.classList.toggle('change')
@@ -15,11 +27,25 @@ const toggle_dark = () => {
   }
 }
 
+const runInfoAnime = () => {
+  document.querySelectorAll('.info p').forEach((el, i) => {
+    anime({
+      targets: el,
+      translateY: [-30, 0],
+      duration: 1000,
+      delay: i * 100,
+      opacity: [0, 1]
+    })
+  })
+}
+runInfoAnime()
+
 const info_holder = document.querySelector('.head_box .right')
 const page = document.querySelector('.page')
 window.onload = () => {
   var val = window.innerWidth
   fixInfoHolder(val)
+  runInfoAnime()
 }
 
 window.onresize = () => {
@@ -27,12 +53,14 @@ window.onresize = () => {
   fixInfoHolder(val)
 }
 
+
+
 const fixInfoHolder = (val) => {
   if (val < 1001) {
     if (!document.querySelector('.info_holder_box')) {
       var info_holder_clone = info_holder.cloneNode(true)
-      info_holder.style.display = 'none'
       info_holder_clone.classList.remove('right')
+      info_holder.style.display = 'none'
       var info_holder_clone_box = document.createElement('section')
       info_holder_clone_box.classList.add('info_holder_box')
       info_holder_clone_box.appendChild(info_holder_clone)
