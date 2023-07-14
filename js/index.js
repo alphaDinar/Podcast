@@ -59,7 +59,7 @@ const togglePlay = (el) => {
     el.id = 'pause'
     el.innerHTML = 'pause'
   } else {
-    audio_file.pause
+    audio_file.pause()
     audio_file.ontimeupdate = () => {
       audio_progress.style.width = audio_progress.style.width
     }
