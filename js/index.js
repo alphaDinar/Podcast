@@ -1,32 +1,3 @@
-const toggle_dark_box = document.querySelector('.toggle_dark_box')
-const toggle_button = toggle_dark_box.children[0]
-
-const setMode = () => {
-  if (sessionStorage.getItem('mode') === 'dark') {
-    console.log('Dark')
-    document.documentElement.style.setProperty('--var-bg', '#2f2f2f');
-    document.documentElement.style.setProperty('--var-color', 'white');
-  } else {
-    console.log('Light')
-    document.documentElement.style.setProperty('--var-bg', 'white');
-    document.documentElement.style.setProperty('--var-color', 'black');
-  }
-}
-setMode()
-
-const toggle_dark = () => {
-  toggle_button.classList.toggle('change')
-  if (sessionStorage.getItem('mode') === 'dark') {
-    sessionStorage.setItem('mode', 'light')
-    document.documentElement.style.setProperty('--var-bg', 'white');
-    document.documentElement.style.setProperty('--var-color', 'black');
-  } else {
-    sessionStorage.setItem('mode', 'dark')
-    document.documentElement.style.setProperty('--var-bg', '#2f2f2f');
-    document.documentElement.style.setProperty('--var-color', 'white');
-  }
-}
-
 const runInfoAnime = () => {
   document.querySelectorAll('.info p').forEach((el, i) => {
     anime({
@@ -35,6 +6,15 @@ const runInfoAnime = () => {
       duration: 1000,
       delay: i * 100,
       opacity: [0, 1]
+    })
+  })
+  document.querySelectorAll('.info_holder nav i').forEach((el, i) => {
+    anime({
+      targets: el,
+      delay: 100 * i,
+      duration: 1000,
+      opacity: [0, 1],
+      translateX: [-30, 0]
     })
   })
 }
@@ -81,17 +61,17 @@ const togglePlay = (el) => {
   if (el.id === 'play') {
     audio_file.play()
     audio_file.muted = false
-    audio_file.ontimeupdate = () => {
-      audio_progress.style.width = `${(audio_file.currentTime / audio_file.duration) * 100}%`
-    }
     el.id = 'pause'
-    el.innerHTML = 'pause'
+    el.innerHTML = 'stop'
+    document.querySelectorAll('.head_box .mid span small').forEach(bar=>{
+      bar.style.background = '#ea5e21'
+    })
   } else {
     audio_file.pause()
-    audio_file.ontimeupdate = () => {
-      audio_progress.style.width = audio_progress.style.width
-    }
     el.id = 'play'
     el.innerHTML = 'play_arrow'
+    document.querySelectorAll('.head_box .mid span small').forEach(bar=>{
+      bar.style.background = 'white'
+    })
   }
 }  

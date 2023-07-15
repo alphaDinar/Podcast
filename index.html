@@ -22,101 +22,262 @@
   <section class="page">
     <nav class="main_nav">
       <img src="images/logo.png" alt="" id="logo">
-      <div class="toggle_dark_box" onclick="toggle_dark()">
-        <div></div>
+      <div>
+        <a href="">Home</a>
+        <a href="">Shows</a>
+        <a href="">Blog</a>
+        <a href="">News</a>
+        <a href="">Events</a>
+        <a href="">Competitions</a>
+        <a href="">Galleries</a>
+        <a href="">Podcast</a>
+        <a href="">Top 30 Music Chart</a>
+        <a href="">FAQ</a>
+        <a href="">About Us</a>
+        <a href="">Contact Us</a>
       </div>
+      <!-- <div class="toggle_dark_box" onclick="toggle_dark()">
+        <div></div>
+      </div> -->
     </nav>
 
-    <section class="top_box">
+    <!-- <section class="top_box">
       <span>All Your Favourite Playlists On One Platform</span>
-    </section>
+    </section> -->
     <section class="head_box">
-      <section class="left">
-        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea necessitatibus ducimus tempora officiis! Porro
-          magni error ratione.</p> -->
-        <button><i class="material-symbols-outlined">play_arrow</i> Start Listening</button>
-        <nav>
-          <i class="fa-brands fa-google-play"></i>
-          <i class="fa-brands fa-apple"></i>
-        </nav>
+      <section class="head_box_cover"
+        style="background-image: url(images/drake.jpg); background-position: center; background-size: cover;"></section>
 
-        <script>
-          document.querySelectorAll('.head_box .left nav i').forEach((el,i)=>{
-            anime({
-              targets : el,
-              opacity : [0,1],
-              // rotate : '1turn',
-              translateX : [-30,0]
-              // scale : [0.1,1],
+      <style>
+        .head_box_cover {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          filter: brightness(40%) blur(10px);
+          background: white;
+        }
+      </style>
+      <section style="display: flex; z-index: 50; width: 100%; justify-content: space-between; align-items: center;">
+        <section class="left">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum placeat autem perspiciatis,</p>
+          <button><i class="material-symbols-outlined">play_arrow</i> Start Listening</button>
+          <nav>
+            <i class="fa-brands fa-google-play"></i>
+            <i class="fa-brands fa-apple"></i>
+          </nav>
+
+          <script>
+            document.querySelectorAll('.head_box .left nav i').forEach((el, i) => {
+              anime({
+                targets: el,
+                opacity: [0, 1],
+                translateX: [-30, 0]
+              })
             })
-          })
-        </script>
+          </script>
 
-      </section>
+        </section>
 
-      <section class="mid">
-        <div style="background-image: url(images/home1.avif);"></div>
+        <section class="mid">
+          <div style="background-image: url(images/drake.jpg);">
+            <audio src="tshego_choppin_ft_aka_raspy_official_audio_aac_40498.m4a" style="display: none;" muted></audio>
+            <section class="cover">
+              <button class="material-symbols-outlined" id="play" onclick="togglePlay(event.target)">play_arrow</button>
+            </section>
+          </div>
+
+          <style>
+            .head_box .mid {
+              display: flex;
+              align-items: center;
+              gap: 0 1.5rem;
+            }
+
+            .head_box .mid p {
+              padding: 10px 0;
+              border-top: 2px solid white;
+              border-bottom: 2px solid white;
+              display: flex;
+              flex-direction: column;
+              gap: 0.3rem;
+              color: white;
+            }
+
+            .head_box .mid p span {
+              gap: 0 0.5rem;
+              display: flex;
+              align-items: center;
+            }
+          </style>
+          <section>
+            <span class="bar_box">
+              <small></small>
+              <small></small>
+              <small></small>
+              <small></small>
+              <small></small>
+            </span>
+
+            <style>
+              .bar_box {
+                display: flex;
+                gap: 1px;
+                height: 30px;
+                padding: 3px 0;
+                flex-direction: column;
+              }
+            </style>
+
+            <script>
+              document.querySelectorAll('.head_box .mid span small').forEach((el, i) => {
+                anime({
+                  loop: true,
+                  targets: el,
+                  scale: [0, 1],
+                  opacity: [0.5, 1],
+                  duration: 2000,
+                  delay: 50 * i,
+                  width: [20, 30, 20, 25, 30],
+                })
+              })
+            </script>
+
+            <style>
+              .head_box .mid span small {
+                display: flex;
+                height: 5px;
+                opacity: 0.3;
+                width: 20px;
+                border-radius: 50px;
+                background: white;
+                color: white;
+              }
+            </style>
+
+            <p>
+              <span><i class="material-symbols-outlined">mic</i> Saturday Jams</span>
+              <span><i class="material-symbols-outlined" id="clock">schedule</i> On air</span>
+              <span><i class="material-symbols-outlined">music_note</i> Now playing </span>
+              <span><i class="material-symbols-outlined">timer</i> 12:00 - 15:00 </span>
+            </p>
+            <button></button>
+
+            <script>
+              anime({
+                loop: true,
+                duration: 3000,
+                targets: '#clock',
+                rotate: [0, 360],
+                opacity: [0, 1]
+              })
+            </script>
+
+          </section>
+        </section>
 
         <script>
           anime({
-            targets : '.head_box .mid div',
-            scale : [0.8,1],
-            duration : 300,
-            // easing : 'easeInOutExpo'
-            // rotate : [10,1],
+            targets: '.head_box .mid div',
+            scale: [0.8, 1],
+            duration: 300,
           })
         </script>
-      </section>
-      <section class="right info_holder">
-        <div class="info">
-          <p>
-            <span>3K+</span>
-            <small>Active users</small>
-          </p>
-          <p>
-            <span>200+</span>
-            <small>Programs</small>
-          </p>
-          <p>
-            <span>30+</span>
-            <small>Dj's</small>
-          </p>
-        </div>
 
-        
-
-        <nav>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-instagram"></i>
-        </nav>
-
-        <script>
-          document.querySelectorAll('.info_holder nav i').forEach((el,i)=>{
-            anime({
-              targets : el,
-              delay : 100 * i,
-              duration : 1000,
-              opacity : [0,1],
-              translateX : [-30,0]
-            })
-          })
-        </script>
+        <section class="right info_holder">
+          <div class="info">
+            <p>
+              <span>3K+</span>
+              <small>Active users</small>
+            </p>
+            <p>
+              <span>200+</span>
+              <small>Programs</small>
+            </p>
+            <p>
+              <span>30+</span>
+              <small>Dj's</small>
+            </p>
+          </div>
+          <nav>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </nav>
+        </section>
       </section>
     </section>
 
     <section class="low_box">
       <section class="con">
-        <h3>R&B Mix</h3>
-        <p>8:30am - 12:30pm</p>
-        <section class="player_bar">
-          <audio src="akon_sunny_day_feat_wyclef_jean_aac_19255.m4a" style="display: none;" muted></audio>
-          <div class="progress">
-            <span></span>
+        <h3>Line Up & Dj's</h3>
+        <section class="program_box">
+          <div class="program">
+            <img src="images/home1.avif" alt="">
+            <p>
+              <strong>R&B mix</strong>
+              <span><i class="material-symbols-outlined">timer</i> 12:00 - 15:00 </span>
+              <small>Latest Episode</small>
+            </p>
           </div>
         </section>
-        <button class="material-symbols-outlined" id="play" onclick="togglePlay(event.target)">play_arrow</button>
+
+        <script>
+          const program_box = document.querySelector('.program_box')
+
+          for (var i = 0; i < 11; i++) {
+            program_box.appendChild(document.querySelector('.program').cloneNode(true))
+          }
+        </script>
       </section>
+
+      <style>
+        .low_box .con {
+          /* color: white; */
+          width: 80%;
+          /* border: 2px solid white; */
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          
+          gap: 1rem;
+        }
+
+        .program_box {
+          width: 100%;
+          /* min-height: 30vh; */
+          /* display: flex; */
+          /* flex-wrap: wrap; */
+          /* justify-content: space-around; */
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr ;
+          gap: 3rem 0;
+          /* border: 2px solid gold; */
+        }
+
+        .program {
+          height: 300px;
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          /* border-radius: 10px; */
+          background: white;
+        }
+
+        .program img {
+          width: 100%;
+          height: 200px;
+        }
+        .program p{
+          width: 90%;
+          padding: 0 5%;
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem 0;
+        }
+      </style>
+
     </section>
   </section>
 
