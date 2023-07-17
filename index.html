@@ -15,6 +15,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/index.css">
+  <link href="css/stackgrid.css" rel="stylesheet" />
   <title>Document</title>
 </head>
 
@@ -37,31 +38,9 @@
         <a href="">Contact Us</a>
       </div>
     </nav>
-
-    <script>
-      const mini_nav = document.querySelector('.main_nav div')
-      console.log(mini_nav)
-
-      const toggleMiniNav =()=>{
-        mini_nav.classList.toggle('change')
-      }
-    </script>
-
     <section class="head_box">
       <section class="head_box_cover"
         style="background-image: url(images/drake.jpg); background-position: center; background-size: cover;"></section>
-
-      <style>
-        .head_box_cover {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          filter: brightness(40%) blur(10px);
-          background: white;
-        }
-      </style>
       <section class="head_box_con">
         <section class="left">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum placeat autem perspiciatis,</p>
@@ -70,17 +49,6 @@
             <i class="fa-brands fa-google-play"></i>
             <i class="fa-brands fa-apple"></i>
           </nav>
-
-          <script>
-            document.querySelectorAll('.head_box .left nav i').forEach((el, i) => {
-              anime({
-                targets: el,
-                opacity: [0, 1],
-                translateX: [-30, 0]
-              })
-            })
-          </script>
-
         </section>
 
         <section class="mid">
@@ -90,26 +58,6 @@
               <button class="material-symbols-outlined" id="play" onclick="togglePlay(event.target)">play_arrow</button>
             </section>
           </div>
-
-          <style>
-
-
-            .head_box .mid p {
-              padding: 10px 0;
-              border-top: 2px solid white;
-              border-bottom: 2px solid white;
-              display: flex;
-              flex-direction: column;
-              gap: 0.3rem;
-              color: white;
-            }
-
-            .head_box .mid p span {
-              gap: 0 0.5rem;
-              display: flex;
-              align-items: center;
-            }
-          </style>
           <section>
             <span class="bar_box">
               <small></small>
@@ -119,42 +67,6 @@
               <small></small>
             </span>
 
-            <style>
-              .bar_box {
-                display: flex;
-                gap: 1px;
-                height: 30px;
-                padding: 3px 0;
-                flex-direction: column;
-              }
-            </style>
-
-            <script>
-              document.querySelectorAll('.head_box .mid span small').forEach((el, i) => {
-                anime({
-                  loop: true,
-                  targets: el,
-                  scale: [0, 1],
-                  opacity: [0.5, 1],
-                  duration: 2000,
-                  delay: 50 * i,
-                  width: [20, 30, 20, 25, 30],
-                })
-              })
-            </script>
-
-            <style>
-              .head_box .mid span small {
-                display: flex;
-                height: 5px;
-                opacity: 0.3;
-                width: 20px;
-                border-radius: 50px;
-                background: white;
-                color: white;
-              }
-            </style>
-
             <p>
               <span><i class="material-symbols-outlined">mic</i> Saturday Jams</span>
               <span><i class="material-symbols-outlined" id="clock">schedule</i> On air</span>
@@ -162,27 +74,8 @@
               <span><i class="material-symbols-outlined">timer</i> 12:00 - 15:00 </span>
             </p>
             <button></button>
-
-            <script>
-              anime({
-                loop: true,
-                duration: 3000,
-                targets: '#clock',
-                rotate: [0, 360],
-                opacity: [0, 1]
-              })
-            </script>
-
           </section>
         </section>
-
-        <script>
-          anime({
-            targets: '.head_box .mid div',
-            scale: [0.8, 1],
-            duration: 300,
-          })
-        </script>
 
         <section class="right info_holder">
           <div class="info">
@@ -222,31 +115,6 @@
               </p>
               <div class="program_tag">Live Now</div>
             </div>
-
-            <style>
-              .program_tag {
-                position: absolute;
-                background: var(--var-theme);
-                color: white;
-                padding: 5px 8px;
-                border-radius: 0 0 2px 0;
-              }
-              .program span{
-                display: flex; 
-                justify-content: space-between;
-              }
-              .program i{
-                font-size: 1.2rem;
-                cursor: pointer;
-              }
-
-              .program p small {
-                display: flex;
-                align-items: center;
-                gap: 0 0.3rem;
-              }
-            </style>
-
           </section>
         </section>
 
@@ -260,7 +128,7 @@
                 <span style="color: rgb(71, 71, 71);">
                   Add the WOW!-factor to your winter: Enter the Clere WOW!-moment competition, right here on METRO FM
                 </span>
-                <small >Competitions | 20 Jun 2023</small>
+                <small>Competitions | 20 Jun 2023</small>
               </p>
             </div>
           </section>
@@ -300,107 +168,168 @@
             </div>
           </section>
         </section>
-
-
-        <script>
-          const program_boxes = document.querySelectorAll('.program_box')
-
-          program_boxes.forEach(box => {
-            for (var i = 0; i < 3; i++) {
-              box.appendChild(box.children[0].cloneNode(true))
-            }
-          })
-
-
-        </script>
       </section>
-
-      <style>
-        .low_box .con {
-          width: 85%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-
-          gap: 2rem;
-        }
-
-
-        
-
-        .con_section {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 1rem 0;
-        }
-
-        .con_section h3 {
-          color: white;
-          letter-spacing: 1px;
-          padding: 5px 0;
-          border-bottom: 2px solid white;
-        }
-
-        .program_box {
-          width: 100%;
-          /* display: flex; */
-          /* justify-content: space-between; */
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          /* gap: 3rem 0; */
-        }
-
-        @media all and (max-width:1450px){
-          .low_box .con{
-            width: 100%;
-          }
-        }
-        @media all and (max-width:1300px){
-          .con_section {
-            align-items: center;
-          }
-          .program_box{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem 0;
-            justify-content: space-around;
-          }
-        }
-
-        .program {
-          /* height: 330px; */
-          width: 270px;
-          display: flex;
-          min-height: 300px;
-          flex-direction: column;
-          justify-content: space-between;
-          position: relative;
-          background: white;
-          /* border-radius: 5px; */
-        }
-
-        .program .img_box {
-          width: 100%;
-          /* border-radius: 5px 5px 0 0; */
-          height: 200px;
-          background-position: center;
-          background-size: cover;
-        }
-
-        .program p {
-          width: 90%;
-          padding: 10px 5%;
-          display: flex;
-          flex-direction: column;
-          gap: 0.3rem 0;
-        }
-      </style>
-
     </section>
+    <section class="social_box">
+      <section class="con">
+        <h3>Live Social Feed</h3>
+        <div class="posts stack-container" max-width="640" min-width="280" gutter="10">
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/dot.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni) and Violet Jiyane Junior Secondary (Carolina).
+
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/Illmatic Album Artwork.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni) and Violet Jiyane Junior Secondary (Carolina).
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/drake.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/kanye.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/rema.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni) and Violet Jiyane Junior Secondary (Carolina).
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/drake.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/Illmatic Album Artwork.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni) and Violet Jiyane Junior Secondary (Carolina).
+
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/dot.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      document.querySelectorAll('.stack-card').forEach((el,i)=>{
+        anime({
+          targets : el,
+          delay : 50 * i,
+          translateY : [40,0],
+          opacity: [0,1],
+          easing : 'easeInOutExpo',
+          // scale : [0,1]
+        })
+      })
+    </script>
+
+    <footer>
+      <section>
+        <h4>DISCOVER</h4>
+        <div>
+          <a href="">News</a>
+          <a href="">Sport</a>
+          <a href="">Education</a>
+          <a href="">TV Liscences</a>
+        </div>
+      </section>
+      <section>
+        <h4>TV</h4>
+        <div>
+          <a href="">S1</a>
+          <a href="">S2</a>
+          <a href="">S3</a>
+        </div>
+      </section>
+      <section>
+        <h4>RADIO</h4>
+        <div>
+          <a href="">Channel Africa</a>
+          <a href="">5 FM</a>
+          <a href="">Lotus FM</a>
+        </div>
+      </section>
+    </footer>
   </section>
 
+
+  <script>
+    const program_boxes = document.querySelectorAll('.program_box')
+
+    program_boxes.forEach(box => {
+      for (var i = 0; i < 3; i++) {
+        box.appendChild(box.children[0].cloneNode(true))
+      }
+    })
+  </script>
+  <script>
+    const mini_nav = document.querySelector('.main_nav div')
+    console.log(mini_nav)
+
+    const toggleMiniNav = () => {
+      mini_nav.classList.toggle('change')
+    }
+  </script>
   <script src="js/index.js"></script>
+  <script src="js/stackgrid.js"></script>
 </body>
 
 </html>
