@@ -18,7 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0 2rem;
+  gap: 1rem 2rem;
 }
 .main_nav div a{
   color: white;
@@ -30,17 +30,6 @@
   aspect-ratio: 4/3;
 }
 
-.top_box {
-  text-align: center;
-  color: var(--var-color);
-}
-
-.top_box span {
-  text-align: center;
-  letter-spacing: 2px;
-  font-weight: 600;
-  font-size: 3rem;
-}
 
 .head_box {
   display: flex;
@@ -49,7 +38,19 @@
   position: relative;
   justify-content: center;
 }
+.head_box_con{
+  display: flex; 
+  z-index: 50; 
+  width: 100%; 
+  justify-content: space-between; 
+  align-items: center;
+}
 
+.head_box .mid {
+  display: flex;
+  align-items: center;
+  gap: 0 1.5rem;
+}
 .head_box .mid div {
   height: 400px;
   border-radius: 180px;
@@ -165,10 +166,28 @@
 }
 
 @media all and (max-width:1000px) {
-  .head_box {
+  .main_nav{
+    gap: 1rem 0;
+    flex-direction: column;
+  }
+  .head_box_con{
+    flex-direction: column;
+    gap: 2rem 0;
+  }
+  .head_box .mid{
+    flex-direction: column;
+    gap: 1rem 0;
+    width: 100%;
+  }
+  .head_box_con .mid div{
+    height: 340px;
+    width: 250px;
+    border-radius: 160px;
+  }
+  .head_box_con .mid section{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
   }
 
   .head_box .left,
@@ -176,6 +195,9 @@
     align-items: center;
     text-align: center;
     width: 90%;
+  }
+  .head_box .left button{
+    display: none;
   }
 
   .head_box .right .info,
@@ -186,18 +208,6 @@
   .head_box .right .info p,
   .info_holder .info p {
     align-items: center;
-  }
-
-  .head_box .mid {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .head_box .mid div {
-    height: 410px;
-    width: 360;
-    border-radius: 160px;
   }
 
   .head_box .left nav {
@@ -233,5 +243,23 @@
     height: 300px;
     width: 100%;
     border-radius: 20px;
+  }
+
+  .main_nav div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 0;
+    transition: 0.4s ease;
+  }
+  .main_nav div a{
+    display: none;
+  }
+
+  .main_nav div.change{
+    height: 250px;
+  }
+  .main_nav div.change a{
+    display: flex;
+    /* border: 1px solid white; */
   }
 }
