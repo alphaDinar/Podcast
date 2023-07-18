@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/dash_main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <section class="prompt_box"></section>
+
+    <section class="sideBar"></section>
+    <section class="main">
+      <section class="main_cover"></section>
+      <section class="add_program_box">
+        <button type="button" class="material-symbols-outlined" style="cursor: pointer;"
+          onclick="toggleProgramForm()">close</button>
+        <form method="post">
+          <section>
+            <span>New Program</span>
+            <header>Monday</header>
+          </section>
+
+          <hr style="width: 90%; border-top: 1px solid darkgray;">
+
+          <section>
+            <label for="add_image" class="image_label">
+              <div class="img_box">
+                <i class="material-symbols-outlined" style="font-size: 4rem;">add_a_photo</i>
+                <input style="display: none;" type="file" id="add_image" accept="image/*"
+                  onchange="addImage(event.target, event.target.parentElement)">
+              </div>
+            </label>
+          </section>
+
+          <hr style="width: 90%; border-top: 1px solid darkgray;">
+
+          <section class="time_form">
+            <div>
+              <small>Start time</small>
+              <input type="time">
+            </div>
+            <div>
+              <small>End time</small>
+              <input type="time" id="add_end_time" onchange="console.log(event.target.value)">
+            </div>
+          </section>
+
+          <hr style="width: 90%; border-top: 1px solid darkgray;">
+
+          <section class="info_form">
+            <div>
+              <small>Program Name</small>
+              <input type="text">
+            </div>
+            <div>
+              <small>Description</small>
+              <textarea name="" id="" cols="10" rows="10"></textarea>
+            </div>
+          </section>
+
+          <hr style="width: 90%; border-top: 1px solid darkgray;">
+
+          <section>
+            <div>
+              <span>Weekly Program</span>
+              <input type="checkbox">
+            </div>
+          </section>
+
+          <section>
+            <button type="submit">Add</button>
+          </section>
+
+          <style>
+            .info_form {
+              width: 100%;
+            }
+
+            .info_form div {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              gap: 0.3rem 0;
+              align-items: center;
+            }
+
+            .info_form input {
+              min-width: 70%;
+              border-bottom: 1px solid black;
+            }
+
+            .info_form textarea {
+              width: 90%;
+              padding: 10px 5%;
+              height: 50px;
+              resize: none;
+              overflow-y: auto;
+              border: 1px dotted darkgray;
+            }
+          </style>
+
+        </form>
+
+
+        <script>
+          const addImage = (el, el_p) => {
+            const [file] = el.files
+            var src = URL.createObjectURL(file)
+            el_p.style.backgroundImage = `url(${src})`
+          }
+        </script>
+
+      </section>
+
+      <style>
+        .main {
+          position: relative;
+          overflow-x: hidden;
+          min-height: 90vh;
+        }
+      </style>
+
+      <header class="main_header">
+        <i class="material-symbols-outlined">radio</i>
+        <span>Programs</span>
+      </header>
+
+      <section class="day_box">
+        <section class="day" data-name="Monday" id="d0" data-abb="Mon">
+          <header>Monday</header>
+          <section class="program_box">
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/dot.jpg);"></div>
+              <p>
+                <strong>R&B mix</strong>
+                <small><i class="material-symbols-outlined">timer</i> 12:00 - 15:00 </small>
+                <small><i class="material-symbols-outlined">play_arrow</i> Latest Episode</small>
+              </p>
+              <div class="program_tag">Live Now</div>
+              <p style="flex-direction: row;">
+                <i class="material-symbols-outlined" style="font-size: 1.6rem;">edit</i>
+                <i class="material-symbols-outlined" style="font-size: 1.6rem;">delete</i>
+              </p>
+            </div>
+            <div class="program" style="align-items: center; justify-content: center;" id="a1"
+              onclick="toggleProgramForm(event.target)">
+              <span style="font-size: 4rem; cursor: pointer;">+</span>
+            </div>
+          </section>
+        </section>
+
+        <script>
+          const main_cover = document.querySelector('.main_cover')
+          const add_program_box = document.querySelector('.add_program_box')
+
+          const toggleProgramForm = () => {
+            add_program_box.classList.toggle('change')
+            main_cover.classList.toggle('change')
+          }
+        </script>
+
+        <!-- <script>
+          const day_box = document.querySelector('.day_box')
+          const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+          for (var i = 0; i < daysOfWeek.length; i++) {
+            day_box.innerHTML += `
+            <section class="day" data-name="${daysOfWeek[i]}" id="d${i}" data-abb="${daysOfWeek[i].substring(0, 3)}">
+              <header>${daysOfWeek[i]}</header>
+              <section class="program_box">
+              </section>
+            </section>
+            `
+          }
+        </script> -->
+      </section>
+
+      <style>
+        .day_box {
+          display: flex;
+          gap: 3rem;
+          flex-direction: column;
+        }
+
+        .day {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem 0;
+        }
+
+        .day header {
+          color: wheat;
+          font-size: 1.5rem;
+          padding: 5px 0;
+          border-bottom: 1px dotted wheat;
+        }
+
+        .program_box {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+        }
+
+        @media all and (max-width:700px) {
+          .program_box {
+            gap: revert;
+            gap: 2rem 0;
+            justify-content: space-around;
+          }
+
+          .add_program_box {
+            padding: revert;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 5vh 0;
+            width: 300px;
+            left: -300px;
+          }
+
+          .add_program_box label div {
+            width: 90%;
+            height: 200px;
+          }
+
+          .add_program_box section {
+            width: 90%;
+          }
+
+          .add_program_box section label {
+            width: 90%;
+          }
+        }
+
+        @media all and (max-width:450px) {
+          .prompt_box {
+            width: 70%;
+            padding: 5px 5%;
+            right: -80%;
+          }
+
+          .prompt_box.change {
+            right: 0;
+          }
+        }
+      </style>
+
+    </section>
+  </section>
+
+  <script>
+    console.log(new Date())
+  </script>
+
+  <script src="js/dashboard.js"></script>
+</body>
+
+</html>

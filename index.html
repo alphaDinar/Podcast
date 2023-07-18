@@ -15,14 +15,25 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/component.css">
   <link href="css/stackgrid.css" rel="stylesheet" />
   <title>Document</title>
 </head>
 
 <body>
   <section class="page">
+    <section class="top_box" style="background: var(--var-theme); color: white; font-size: 1.5rem;">
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </section>
+
     <nav class="main_nav">
-      <img src="images/logo.png" alt="" id="logo" onclick="toggleMiniNav()">
+      <section>
+        <img src="images/logo.png" alt="" id="logo">
+        <span class="program_name">Saturday Jams</span>
+        <button class="material-symbols-outlined" onclick="toggleMiniNav()">menu</button>
+      </section>
       <div>
         <a href="">Home</a>
         <a href="">Shows</a>
@@ -38,6 +49,7 @@
         <a href="">Contact Us</a>
       </div>
     </nav>
+
     <section class="head_box">
       <section class="head_box_cover"
         style="background-image: url(images/drake.jpg); background-position: center; background-size: cover;"></section>
@@ -182,7 +194,8 @@
             </div>
             <div class="content">
               <small>
-                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni) and Violet Jiyane Junior Secondary (Carolina).
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
 
               </small>
             </div>
@@ -195,7 +208,8 @@
             </div>
             <div class="content">
               <small>
-                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni) and Violet Jiyane Junior Secondary (Carolina).
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
               </small>
             </div>
           </div>
@@ -227,7 +241,8 @@
             </div>
             <div class="content">
               <small>
-                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni) and Violet Jiyane Junior Secondary (Carolina).
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
               </small>
             </div>
           </div>
@@ -249,7 +264,8 @@
             </div>
             <div class="content">
               <small>
-                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni) and Violet Jiyane Junior Secondary (Carolina).
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
 
               </small>
             </div>
@@ -269,13 +285,13 @@
     </section>
 
     <script>
-      document.querySelectorAll('.stack-card').forEach((el,i)=>{
+      document.querySelectorAll('.stack-card').forEach((el, i) => {
         anime({
-          targets : el,
-          delay : 50 * i,
-          translateY : [40,0],
-          opacity: [0,1],
-          easing : 'easeInOutExpo',
+          targets: el,
+          delay: 50 * i,
+          translateY: [40, 0],
+          opacity: [0, 1],
+          easing: 'easeInOutExpo',
           // scale : [0,1]
         })
       })
@@ -308,6 +324,22 @@
         </div>
       </section>
     </footer>
+    <section class="last_box">
+      <div class="info">
+        <p>
+          <span>3K+</span>
+          <small>Active users</small>
+        </p>
+        <p>
+          <span>200+</span>
+          <small>Programs</small>
+        </p>
+        <p>
+          <span>30+</span>
+          <small>Dj's</small>
+        </p>
+      </div>
+    </section>
   </section>
 
 
