@@ -25,7 +25,7 @@ document.querySelector('.sideBar').innerHTML += `
 <nav>
   <a href="dashboard.html"> <i class="material-symbols-outlined">dashboard</i> <span>Dashboard</span> </a>
   <a href="programs.html"> <i class="material-symbols-outlined">radio</i> <span>Programs</span> </a>
-  <a href=""> <i class="material-symbols-outlined">trophy</i> <span>Competitions</span> </a>
+  <a href="competitions.html"> <i class="material-symbols-outlined">trophy</i> <span>Competitions</span> </a>
   <a href=""> <i class="material-symbols-outlined">podcasts</i> <span>Podcasts</span></a>
   <a href=""> <i class="material-symbols-outlined">tag</i> <span>Blogs</span></a>
   <a href=""> <i class="material-symbols-outlined">news</i> <span>News</span></a>

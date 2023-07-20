@@ -71,14 +71,17 @@ footer {
   display: flex;
   align-items: center;
   gap: 0 1.5rem;
+  background: var(--var-bg);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .head_box .mid div {
-  height: 400px;
-  border-radius: 180px;
-  width: 280px;
+  height: 300px;
+  width: 380px;
   transition: 0.3s ease;
   background-position: center;
+  border-radius: 10px;
   background-size: cover;
   overflow: hidden;
 }
@@ -93,9 +96,11 @@ footer {
 }
 
 .head_box .mid div .cover button {
-  width: 40px;
-  height: 40px;
+  font-size: 5rem;
+  background: var(--var-bg);
+  color: var(--var-theme);
   border-radius: 50%;
+  transition: 0.3s ease;
   cursor: pointer;
 }
 
@@ -107,6 +112,19 @@ footer {
   flex-direction: column;
   gap: 0.3rem;
   color: white;
+}
+.head_box .mid .play_box{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem 0;
+  align-items: flex-start;
+}
+.head_box .mid .play_box button{
+  background: var(--var-theme);
+  color: white;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 .head_box .mid p span {
@@ -374,10 +392,9 @@ footer div a {
   }
 
   .head_box_con .mid div {
-    height: 340px;
-    width: 250px;
+    height: 300px;
+    width: 400px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    border-radius: 160px;
   }
 
   .head_box_con .mid section {
@@ -468,5 +485,9 @@ footer div a {
 
   .main_nav div.change a {
     display: flex;
+  }
+
+  .head_box .mid .play_box{
+    align-items: center;
   }
 }

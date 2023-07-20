@@ -88,7 +88,7 @@
 }
 
 .main_cover{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -100%;
   width: 100%;
@@ -127,6 +127,7 @@
   top: 0;
   min-height: 90vh;
   position: absolute;
+  position: fixed;
   z-index: 100;
   transition: 0.4s ease;
   left: -50%;
@@ -149,10 +150,13 @@
 .add_program_box form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
 }
+/* .add_program_box form hr{
+  display: none;
+} */
 
 .add_program_box form header {
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -172,6 +176,8 @@
 
 label {
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .add_program_box label div {

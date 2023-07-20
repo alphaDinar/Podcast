@@ -36,14 +36,7 @@
       </section>
       <div>
         <a href="">Home</a>
-        <a href="">Shows</a>
-        <a href="">Blog</a>
-        <a href="">News</a>
-        <a href="">Events</a>
-        <a href="">Competitions</a>
         <a href="">Galleries</a>
-        <a href="">Podcast</a>
-        <a href="">Top 30 Music Chart</a>
         <a href="">FAQ</a>
         <a href="">About Us</a>
         <a href="">Contact Us</a>
@@ -67,11 +60,12 @@
           <div style="background-image: url(images/drake.jpg);">
             <audio src="tshego_choppin_ft_aka_raspy_official_audio_aac_40498.m4a" style="display: none;" muted></audio>
             <section class="cover" style="flex-direction: column;">
-              <button class="material-symbols-outlined" id="play" onclick="togglePlay(event.target)">play_arrow</button>
-              <span style="background: var(--var-theme); color: white; padding: 3px 10px; margin-top: 5px;">Listen Live</span>
+              <button class="material-symbols-outlined play_btn" id="play" onclick="togglePlay()">play_arrow</button>
+              <span style="background: var(--var-theme); color: white; padding: 8px 10px; margin-top: 5px; border-radius: 3px; cursor: pointer;" onclick="togglePlay()">Listen Live</span>
             </section>
           </div>
-          <section>
+          <section class="play_box">
+            <button class="material-symbols-outlined" onclick="togglePlay()">headphones</button>
             <span class="bar_box">
               <small></small>
               <small></small>
@@ -86,7 +80,7 @@
               <span><i class="material-symbols-outlined">music_note</i> Now playing </span>
               <span><i class="material-symbols-outlined">timer</i> 12:00 - 15:00 </span>
             </p>
-            <button></button>
+            <!-- <button></button> -->
           </section>
         </section>
 

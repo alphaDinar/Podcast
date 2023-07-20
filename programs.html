@@ -36,6 +36,17 @@
 
           <hr style="width: 90%; border-top: 1px solid darkgray;">
 
+          <section class="info_form">
+            <div>
+              <small>Program Name</small>
+              <input type="text">
+            </div>
+            <div>
+              <small>Description</small>
+              <textarea name="" id="" cols="10" rows="10"></textarea>
+            </div>
+          </section>
+
           <section>
             <label for="add_image" class="image_label">
               <div class="img_box">
@@ -58,21 +69,6 @@
               <input type="time" id="add_end_time" onchange="console.log(event.target.value)">
             </div>
           </section>
-
-          <hr style="width: 90%; border-top: 1px solid darkgray;">
-
-          <section class="info_form">
-            <div>
-              <small>Program Name</small>
-              <input type="text">
-            </div>
-            <div>
-              <small>Description</small>
-              <textarea name="" id="" cols="10" rows="10"></textarea>
-            </div>
-          </section>
-
-          <hr style="width: 90%; border-top: 1px solid darkgray;">
 
           <section>
             <div>
@@ -99,12 +95,13 @@
             }
 
             .info_form input {
-              min-width: 70%;
-              border-bottom: 1px solid black;
+              width: 70%;
+              padding: 10px 5%;
+              border: 1px dotted darkgray;
             }
 
             .info_form textarea {
-              width: 90%;
+              width: 70%;
               padding: 10px 5%;
               height: 50px;
               resize: none;
@@ -138,6 +135,15 @@
         <i class="material-symbols-outlined">radio</i>
         <span>Programs</span>
       </header>
+
+      <section>
+        <select name="" id="">
+          <option value="all">All</option>
+          <option value="">Sunday</option>
+          <option value="">Monday</option>
+          <option value="">Tuesday</option>
+        </select>
+      </section>
 
       <section class="day_box">
         <section class="day" data-name="Monday" id="d0" data-abb="Mon">
@@ -261,7 +267,7 @@
   </section>
 
   <script>
-    console.log(new Date())
+    console.log(new Date().getDay())
   </script>
 
   <script src="js/dashboard.js"></script>
