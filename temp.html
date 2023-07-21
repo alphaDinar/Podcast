@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link href="css/stackgrid.css" rel="stylesheet" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <section class="top_box" style="background: var(--var-theme); color: white; font-size: 1.5rem;">
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </section>
+
+
+    <nav class="top_nav">
+      <div>
+        <a href="">Home</a>
+        <a href="">Galleries</a>
+        <a href="">FAQ</a>
+        <a href="">About Us</a>
+        <a href="">Contact Us</a>
+      </div>
+      <div class="search_bar">
+        <i class="material-symbols-outlined" style="color: white;">search</i>
+        <input type="Search" placeholder="search">
+      </div>
+    </nav>
+
+    <nav class="mid_nav">
+      <section>
+        <img src="images/logo.png" alt="" id="logo">
+        <div class="info_box">
+          <div class="img_box play_btn" id="play" style="background-image: url(images/drake.jpg);"
+            onclick="togglePlay()">
+            <audio src="tshego_choppin_ft_aka_raspy_official_audio_aac_40498.m4a" style="display: none;"></audio>
+            <div>
+              <span class="bar_box">
+                <small></small>
+                <small></small>
+                <small></small>
+                <small></small>
+                <small></small>
+              </span>
+              <span>Listen Live</span>
+            </div>
+          </div>
+          <div class="info">
+            <p><i class="material-symbols-outlined">radio</i> <span>THE MIDDWAY LINKUP</span></p>
+            <p><i class="material-symbols-outlined" id="clock">schedule</i> <span>ON AIR:</span> <small>12:00 -
+                15:00</small></p>
+            <p><i class="material-symbols-outlined">music_note</i> <span>NOW PLAYING:-</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="social_box">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <div>
+          <p><i class="material-symbols-outlined">timer</i> <span>LATER:</span> <small>15:00-18:00</small></p>
+          <p><span>THE TOUCHDOWN</span></p>
+        </div>
+      </section>
+    </nav>
+
+
+
+    <style>
+      .top_nav {
+        display: flex;
+        width: 76.5%;
+        padding: 2vh 11.75%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background: black;
+      }
+
+      .top_nav div {
+        display: flex;
+        gap: 0 1rem;
+      }
+
+      .top_nav div input {
+        background: transparent;
+        font-size: 1.1rem;
+        border-bottom: 1px solid white;
+      }
+
+      .top_nav a {
+        color: white;
+        font-size: 1rem;
+      }
+    </style>
+
+    <style>
+      .mid_nav {
+        align-items: center;
+        display: flex;
+        padding: 3vh 20%;
+        width: 60%;
+        align-items: flex-start;
+        justify-content: space-between;
+        background: rgba(0, 0, 0, 0.452);
+        color: white;
+        margin: 2rem 0;
+      }
+
+      .mid_nav section {
+        display: flex;
+        gap: 0 1rem;
+      }
+
+      .mid_nav .img_box {
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        height: 120px;
+      }
+
+      .mid_nav .img_box div {
+        padding: 5px;
+        background: black;
+      }
+
+      .mid_nav .info_box {
+        gap: 0 1rem;
+        display: flex;
+      }
+
+      .mid_nav .info_box .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem 0;
+      }
+
+      .mid_nav .social_box {
+        display: flex;
+        font-size: 1.2rem;
+        gap: 0 0.5rem;
+      }
+
+      .mid_nav p {
+        display: flex;
+        align-items: center;
+        gap: 0 0.3rem;
+      }
+
+
+      @media all and (max-width:1500px) {
+        .mid_nav {
+          width: 80%;
+          padding: 3vh 10%;
+        }
+      }
+
+      @media all and (max-width:1200px) {
+        .mid_nav {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem 0;
+        }
+      }
+
+      @media all and (max-width:1000px) {
+        .mid_nav .social_box {
+          display: none;
+        }
+      }
+
+      @media all and (max-width:900px) {
+        .top_nav {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem 0;
+          width: 80%;
+          text-align: center;
+          padding: 2vh 10%;
+        }
+
+        .top_nav div a {
+          font-size: 0.9rem;
+        }
+
+        .mid_nav section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem 0;
+        }
+
+        .mid_nav .img_box {
+          width: 500px;
+          height: 250px;
+        }
+
+        .mid_nav section div {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .mid_nav section .info_box {
+          gap: 1rem 0;
+          padding: 10px 0;
+          border-bottom: 2px solid white;
+        }
+      }
+
+      @media all and (max-width:600px) {
+        .top_nav {
+          width: 90%;
+          padding: 2vh 5%;
+        }
+
+        .mid_nav {
+          width: 90%;
+          padding: 3vh 5%;
+        }
+
+        .mid_nav section {
+          width: 100%;
+        }
+
+        .mid_nav section .img_box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .mid_nav section .info_box {
+          width: 100%;
+        }
+
+        .mid_nav .img_box {
+          width: 110%;
+          height: 250px;
+        }
+      }
+    </style>
+
+    <section class="low_box">
+      <section class="con">
+        <section class="con_section">
+          <h3>Line Up & Dj's</h3>
+          <section class="program_box">
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/Illmatic\ Album\ Artwork.jpg);"></div>
+              <p>
+                <strong>R&B mix</strong>
+                <small><i class="material-symbols-outlined">timer</i> 12:00 - 15:00 </small>
+                <small><i class="material-symbols-outlined">play_arrow</i> Latest Episode</small>
+              </p>
+              <div class="program_tag">Live Now</div>
+            </div>
+          </section>
+        </section>
+
+        <section class="con_section">
+          <h3>Competitions</h3>
+          <section class="program_box">
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/ford.webp);"></div>
+              <p>
+                <strong>Ford Competition</strong>
+                <span class="program_text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae corrupti neque ullam libero
+                  quidem, officia quo exercitationem qui sed, molestias magni tempora quod cumque eligendi quae expedita
+                  porro quibusdam error?Add the WOW!-factor to your winter: Enter the Clere WOW!-moment competition,
+                  right here on METRO FM
+                </span>
+                <small>Competitions | 20 Jun 2023</small>
+                <span>
+                  <span>
+                    <i class="material-symbols-outlined">favorite</i> <small>4</small>
+                  </span>
+                  <i class="material-symbols-outlined">share</i>
+                </span>
+              </p>
+            </div>
+          </section>
+        </section>
+
+
+        <style>
+          .program_text {
+            display: inline-block;
+            color: rgb(74, 74, 74);
+            height: 65px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+
+          .program p {
+            gap: 0.5rem 0;
+          }
+        </style>
+
+        <section class="con_section">
+          <h3>Podcasts</h3>
+          <section class="program_box">
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/dot.jpg);"></div>
+              <p>
+                <strong>THE ENCORE</strong>
+                <span>
+                  <small>Podcasts | 5 Jun 2023</small>
+                  <i class="material-symbols-outlined">share</i>
+                </span>
+              </p>
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section class="blog_box">
+      <section class="con">
+        <h3>Live Social Feed</h3>
+        <div class="posts stack-container" max-width="640" min-width="280" gutter="10">
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/dot.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
+
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/Illmatic Album Artwork.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/drake.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/kanye.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/rema.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/drake.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/Illmatic Album Artwork.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
+
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="program_tag">Instagram</div>
+            <img src="images/dot.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      document.querySelectorAll('.stack-card').forEach((el, i) => {
+        anime({
+          targets: el,
+          delay: 50 * i,
+          translateY: [40, 0],
+          opacity: [0, 1],
+          easing: 'easeInOutExpo',
+          // scale : [0,1]
+        })
+      })
+    </script>
+
+    <footer>
+      <section>
+        <h4>DISCOVER</h4>
+        <div>
+          <a href="">News</a>
+          <a href="">Sport</a>
+          <a href="">Education</a>
+          <a href="">TV Liscences</a>
+        </div>
+      </section>
+      <section>
+        <h4>TV</h4>
+        <div>
+          <a href="">S1</a>
+          <a href="">S2</a>
+          <a href="">S3</a>
+        </div>
+      </section>
+      <section>
+        <h4>RADIO</h4>
+        <div>
+          <a href="">Channel Africa</a>
+          <a href="">5 FM</a>
+          <a href="">Lotus FM</a>
+        </div>
+      </section>
+    </footer>
+    <section class="last_box">
+      <div class="info">
+        <p>
+          <span>3K+</span>
+          <small>Active users</small>
+        </p>
+        <p>
+          <span>200+</span>
+          <small>Programs</small>
+        </p>
+        <p>
+          <span>30+</span>
+          <small>Dj's</small>
+        </p>
+      </div>
+    </section>
+  </section>
+
+
+  <script>
+    const program_boxes = document.querySelectorAll('.program_box')
+
+    program_boxes.forEach(box => {
+      for (var i = 0; i < 3; i++) {
+        box.appendChild(box.children[0].cloneNode(true))
+      }
+    })
+  </script>
+  <script>
+    const mini_nav = document.querySelector('.main_nav div')
+    console.log(mini_nav)
+
+    const toggleMiniNav = () => {
+      mini_nav.classList.toggle('change')
+    }
+  </script>
+  <script src="js/index.js"></script>
+  <script src="js/stackgrid.js"></script>
+</body>
+
+</html>
