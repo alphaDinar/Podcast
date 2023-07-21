@@ -1,3 +1,30 @@
+.program_name,
+.main_nav button {
+  display: none;
+}
+
+.main_nav {
+  width: 90%;
+  padding: 2vh 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5vh;
+}
+
+.main_nav div {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+}
+
+.main_nav div a {
+  color: white;
+}
+
+
 .program {
   width: 270px;
   display: flex;

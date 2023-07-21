@@ -22,7 +22,7 @@
 <body>
   <section class="page">
     <section class="sideBar">
-      
+
     </section>
 
     <section class="main">
@@ -66,22 +66,56 @@
 
       <hr id="seperator">
       <section class="low">
-        <section class="chart_box">
-          <div class="chart">
-            <header> <i class="material-symbols-outlined">podcasts</i> Podcasts</header>
-            <div class="rank_box">
-              <div class="rank">
-                <span>1.</span>
-                <div class="img_box" style="background-image: url(images/dot.jpg);"></div>
-                <p>
-                  5th June, 2023
-                </p>
+        <section class="chart_box swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="chart">
+                <header> <i class="material-symbols-outlined">podcasts</i> Podcasts</header>
+                <div class="rank_box">
+                  <div class="rank">
+                    <span>1.</span>
+                    <div class="img_box" style="background-image: url(images/dot.jpg);"></div>
+                    <p>
+                      5th June, 2023
+                    </p>
+                  </div>
+                  <div class="rank"></div>
+                  <div class="rank"></div>
+                </div>
               </div>
-              <div class="rank"></div>
-              <div class="rank"></div>
             </div>
-          </div>
+            <div class="swiper-slide">
+              <div class="chart">
+                <header> <i class="material-symbols-outlined">podcasts</i> Podcasts</header>
+                <div class="rank_box">
+                  <div class="rank">
+                    <span>1.</span>
+                    <div class="img_box" style="background-image: url(images/dot.jpg);"></div>
+                    <p>
+                      5th June, 2023
+                    </p>
+                  </div>
+                  <div class="rank"></div>
+                  <div class="rank"></div>
+                </div>
+              </div>
+            </div>
         </section>
+
+        <script>
+          var chart_swiper = new Swiper('.chart_box', {
+            loop: true,
+            speed: 1000
+          })
+
+          console.log('me')
+        </script>
+
+        <style>
+          .chart_box {
+            border: 3px solid gold;
+          }
+        </style>
 
         <section class="upcoming_box">
           <header>Upcoming Programs</header>
@@ -109,4 +143,5 @@
 
   <script src="js/dashboard.js"></script>
 </body>
+
 </html>

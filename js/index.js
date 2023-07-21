@@ -48,7 +48,8 @@ const togglePlay = () => {
   }
 }  
 
-document.querySelectorAll('.head_box .mid span small').forEach((el, i) => {
+
+document.querySelectorAll('.bar_box small').forEach((el, i) => {
   anime({
     loop: true,
     targets: el,

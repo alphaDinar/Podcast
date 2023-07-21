@@ -28,8 +28,12 @@
       <i class="fa-brands fa-instagram"></i>
     </section>
 
-
-    <nav class="top_nav">
+    <nav class="main_nav">
+      <section>
+        <img src="images/logo.png" alt="" id="logo">
+        <span class="program_name">Saturday Jams</span>
+        <button class="material-symbols-outlined" onclick="toggleMiniNav()">menu</button>
+      </section>
       <div>
         <a href="">Home</a>
         <a href="">Galleries</a>
@@ -37,232 +41,72 @@
         <a href="">About Us</a>
         <a href="">Contact Us</a>
       </div>
-      <div class="search_bar">
-        <i class="material-symbols-outlined" style="color: white;">search</i>
-        <input type="Search" placeholder="search">
-      </div>
     </nav>
 
-    <nav class="mid_nav">
-      <section>
-        <img src="images/logo.png" alt="" id="logo">
-        <div class="info_box">
-          <div class="img_box" style="background-image: url(images/drake.jpg);">
-            <div>
-              <!-- <button></button> -->
-              <span class="bar_box">
-                <small></small>
-                <small></small>
-                <small></small>
-                <small></small>
-                <small></small>
-              </span>
-              <span>Listen Live</span>
-            </div>
+    <section class="head_box">
+      <section class="head_box_cover"
+        style="background-image: url(images/drake.jpg); background-position: center; background-size: cover;"></section>
+      <section class="head_box_con">
+        <section class="left">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum placeat autem perspiciatis,</p>
+          <button><i class="material-symbols-outlined">play_arrow</i> Start Listening</button>
+          <nav>
+            <i class="fa-brands fa-google-play"></i>
+            <i class="fa-brands fa-apple"></i>
+          </nav>
+        </section>
+
+        <section class="mid">
+          <div style="background-image: url(images/drake.jpg);">
+            <audio src="tshego_choppin_ft_aka_raspy_official_audio_aac_40498.m4a" style="display: none;" muted></audio>
+            <section class="cover" style="flex-direction: column;">
+              <button class="material-symbols-outlined play_btn" id="play" onclick="togglePlay()">play_arrow</button>
+              <span style="background: var(--var-theme); color: white; padding: 8px 10px; margin-top: 5px; border-radius: 3px; cursor: pointer;" onclick="togglePlay()">Listen Live</span>
+            </section>
           </div>
+          <section class="play_box">
+            <button class="material-symbols-outlined" onclick="togglePlay()">headphones</button>
+            <span class="bar_box">
+              <small></small>
+              <small></small>
+              <small></small>
+              <small></small>
+              <small></small>
+            </span>
+
+            <p>
+              <span><i class="material-symbols-outlined">mic</i> Saturday Jams</span>
+              <span><i class="material-symbols-outlined" id="clock">schedule</i> On air</span>
+              <span><i class="material-symbols-outlined">music_note</i> Now playing </span>
+              <span><i class="material-symbols-outlined">timer</i> 12:00 - 15:00 </span>
+            </p>
+            <!-- <button></button> -->
+          </section>
+        </section>
+
+        <section class="right info_holder">
           <div class="info">
-            <p><i class="material-symbols-outlined">radio</i> <span>THE MIDDWAY LINKUP</span></p>
-            <p><i class="material-symbols-outlined" id="clock">schedule</i> <span>ON AIR:</span> <small>12:00 -
-                15:00</small></p>
-            <p><i class="material-symbols-outlined">music_note</i> <span>NOW PLAYING:-</span></p>
+            <p>
+              <span>3K+</span>
+              <small>Active users</small>
+            </p>
+            <p>
+              <span>200+</span>
+              <small>Programs</small>
+            </p>
+            <p>
+              <span>30+</span>
+              <small>Dj's</small>
+            </p>
           </div>
-        </div>
+          <nav>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </nav>
+        </section>
       </section>
-
-      <section>
-        <div class="social_box">
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-instagram"></i>
-        </div>
-
-        <div>
-          <p><i class="material-symbols-outlined">timer</i> <span>LATER:</span> <small>15:00-18:00</small></p>
-          <p><span>THE TOUCHDOWN</span></p>
-        </div>
-      </section>
-    </nav>
-
-
-
-    <style>
-      .top_nav {
-        display: flex;
-        width: 76.5%;
-        padding: 2vh 11.75%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        background: black;
-      }
-
-      .top_nav div {
-        display: flex;
-        gap: 0 1rem;
-      }
-
-      .top_nav div input {
-        background: transparent;
-        font-size: 1.1rem;
-        border-bottom: 1px solid white;
-      }
-
-      .top_nav a {
-        color: white;
-        font-size: 1rem;
-      }
-    </style>
-
-    <style>
-      .mid_nav {
-        align-items: center;
-        display: flex;
-        padding: 3vh 20%;
-        width: 60%;
-        align-items: flex-start;
-        justify-content: space-between;
-        background: rgba(0, 0, 0, 0.452);
-        color: white;
-        margin: 2rem 0;
-      }
-
-
-
-
-      .mid_nav section {
-        display: flex;
-        gap: 0 1rem;
-      }
-
-      .mid_nav .img_box {
-        width: 200px;
-        background-position: center;
-        background-size: cover;
-        cursor: pointer;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-        height: 120px;
-      }
-
-      .mid_nav .img_box div {
-        padding: 5px;
-        background: black;
-      }
-
-      .mid_nav .info_box {
-        gap: 0 1rem;
-        display: flex;
-      }
-
-      .mid_nav .info_box .info {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem 0;
-      }
-
-      .mid_nav .social_box {
-        display: flex;
-        font-size: 1.2rem;
-        gap: 0 0.5rem;
-      }
-
-      .mid_nav p {
-        display: flex;
-        align-items: center;
-        gap: 0 0.3rem;
-      }
-
-
-      @media all and (max-width:1500px) {
-        .mid_nav {
-          width: 80%;
-          padding: 3vh 10%;
-        }
-      }
-
-      @media all and (max-width:1200px) {
-        .mid_nav {
-          flex-direction: column;
-          align-items: center;
-          gap: 2rem 0;
-        }
-      }
-
-      @media all and (max-width:1000px) {
-        .mid_nav .social_box {
-          display: none;
-        }
-      }
-
-      @media all and (max-width:900px) {
-        .top_nav{
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem 0;
-          width: 80%;
-          text-align: center;
-          padding: 2vh 10%;
-        }
-        .top_nav div a{
-          font-size: 0.9rem;
-        }
-        .mid_nav section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 2rem 0;
-        }
-
-        .mid_nav .img_box {
-          width: 500px;
-          height: 250px;
-        }
-
-        .mid_nav section div {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-        }
-
-        .mid_nav section .info_box {
-          gap: 1rem 0;
-          padding: 10px 0;
-          border-bottom: 2px solid white;
-        }
-      }
-
-      @media all and (max-width:600px) {
-        .top_nav{
-          width: 90%;
-          padding: 2vh 5%;
-        }
-        .mid_nav {
-          width: 90%;
-          padding: 3vh 5%;
-        }
-
-        .mid_nav section {
-          width: 100%;
-        }
-
-        .mid_nav section .img_box {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .mid_nav section .info_box {
-
-          width: 100%;
-        }
-
-        .mid_nav .img_box {
-          width: 80%;
-          height: 250px;
-        }
-      }
-    </style>
+    </section>
 
     <section class="low_box">
       <section class="con">
@@ -314,7 +158,7 @@
         </section>
       </section>
     </section>
-    <section class="blog_box">
+    <section class="social_box">
       <section class="con">
         <h3>Live Social Feed</h3>
         <div class="posts stack-container" max-width="640" min-width="280" gutter="10">
