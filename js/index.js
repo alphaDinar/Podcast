@@ -28,22 +28,23 @@ const audio_file = document.querySelector('audio')
 const audio_progress = document.querySelector('.player_bar .progress')
 
 const play_btn = document.querySelector('.play_btn')
+console.log(play_btn)
 
 const togglePlay = () => {
   if (play_btn.id === 'play') {
     audio_file.play()
     audio_file.muted = false
     play_btn.id = 'pause'
-    // play_btn.innerHTML = 'stop'
+    play_btn.innerHTML = 'stop'
     document.querySelectorAll('.bar_box small').forEach(bar=>{
       bar.style.background = '#ea5e21'
     })
   } else {
     audio_file.pause()
     play_btn.id = 'play'
-    // play_btn.innerHTML = 'play_arrow'
+    play_btn.innerHTML = 'play_arrow'
     document.querySelectorAll('.bar_box small').forEach(bar=>{
-      bar.style.background = 'white'
+      bar.style.background = '#2f2f2f'
     })
   }
 }  
