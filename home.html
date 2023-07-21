@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <link rel="stylesheet" href="css/component.css">
+  <link href="css/stackgrid.css" rel="stylesheet" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <nav class="top_nav">
+      <a href="">Home</a>
+
+      <section>
+        <div>
+          <a href="">Galleries</a>
+          <a href="">FAQ</a>
+          <a href="">About Us</a>
+          <a href="">Contact Us</a>
+        </div>
+        <div>
+          <input type="text" placeholder="Search">
+          <i class="material-symbols-outlined">search</i>
+        </div>
+      </section>
+    </nav>
+    <style>
+      .top_nav,
+      .head_box,
+      .social_box,
+      .low_box {
+        width: 70%;
+      }
+
+
+
+      .top_nav {
+        padding: 2vh 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .top_nav,
+      .top_nav a {
+        color: white;
+      }
+
+      .top_nav section {
+        display: flex;
+        gap: 0 3rem;
+      }
+
+      .top_nav section div {
+        display: flex;
+        gap: 0 1rem;
+      }
+    </style>
+
+    <section class="head_box">
+      <section class="wrapper">
+        <section class="part">
+          <div class="logo_box_holder">
+            <img src="images/logo.png">
+            <section class="logo_box">
+            </section>
+          </div>
+          <section class="player_box">
+            <div class="top">
+              <button class="material-symbols-outlined play_btn" id="play">play_arrow</button>
+              <span class="bar_box">
+                <small></small>
+                <small></small>
+                <small></small>
+                <small></small>
+                <small></small>
+              </span>
+            </div>
+            <hr style="width: 100%; border-top: 1px solid var(--var-bg);">
+
+            <div class="low">
+              <p><i class="material-symbols-outlined">radio</i> <span>THE MIDDWAY LINKUP</span></p>
+              <p><i class="material-symbols-outlined" id="clock">schedule</i> <span>ON AIR:</span> <small>12:00 -
+                  15:00</small></p>
+              <p><i class="material-symbols-outlined">music_note</i> <span>NOW PLAYING:-</span></p>
+            </div>
+          </section>
+        </section>
+
+
+
+        <style>
+          .bar_box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem 0;
+            min-width: 40px;
+            padding: 5px;
+          }
+
+          .bar_box small {
+            width: 40px;
+            border-radius: 100px;
+            height: 6px;
+            background: rgb(75, 75, 75);
+          }
+        </style>
+
+
+        <div class="next_box">
+          <i class="material-symbols-outlined">chevron_right</i>
+          <span>Up Next</span>
+        </div>
+        <style>
+          .next_box {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .next_box i {
+            font-size: 4rem;
+            font-weight: 600;
+          }
+        </style>
+        <section class="part">
+          <section class="player_box" style="border-radius: 10px;">
+            <div class="top">
+              <img src="images/kanye.jpg" alt="">
+              <i class="material-symbols-outlined">timer</i>
+            </div>
+            <hr style="width: 100%; border-top: 1px solid var(--var-bg);">
+
+            <div class="low">
+              <p><i class="material-symbols-outlined">radio</i> <span>THE MIDDWAY LINKUP</span></p>
+              <p><i class="material-symbols-outlined" id="clock">schedule</i> <span>UP NEXT:</span> <small>12:00 -
+                  15:00</small></p>
+              <!-- <p><i class="material-symbols-outlined">music_note</i> <span>NOW PLAYING:-</span></p> -->
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+
+
+    <script>
+      console.log(window.innerWidth)
+    </script>
+
+    <style>
+      .head_box {
+        display: flex;
+        padding: 3vh 15%;
+        background: whitesmoke;
+      }
+
+      .head_box .wrapper {
+        display: flex;
+        margin-left: 120px;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 120px);
+      }
+
+      .head_box .wrapper .part {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo_box_holder {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo_box {
+        background-image: url(images/kanye.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 400px;
+        border-radius: 0 20px 20px 0;
+        /* border-radius:  0 200px 200px 0; */
+        height: 240px;
+        z-index: 100;
+      }
+
+      .logo_box_holder img {
+        height: 242px;
+        z-index: 120;
+        position: absolute;
+        left: -120px;
+      }
+
+      .player_box {
+        padding: 25px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 0 10px 10px 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        /* background: var(--var-bg); */
+        color: white;
+        gap: 1rem 0;
+      }
+
+      .player_box .top {
+        display: flex;
+        align-items: center;
+        gap: 0 1rem;
+      }
+
+      .player_box .top img {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+      }
+
+      .player_box .top button {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        cursor: pointer;
+        background: var(--var-bg);
+        color: white;
+      }
+
+      .player_box .low {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem 0;
+      }
+
+      .player_box .low p {
+        display: flex;
+        align-items: center;
+        gap: 0 0.3rem;
+        color: var(--var-bg);
+      }
+
+
+      .player_box .low p span {
+        font-weight: 600;
+        color: rgb(70, 70, 70);
+      }
+    </style>
+
+    <section class="social_box">
+      <section class="media_box">
+        <strong>Follow Us On</strong>
+        <div class="item_box">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-google"></i>
+          <i class="fa-brands fa-yahoo"></i>
+          <i class="fa-brands fa-tiktok"></i>
+          <i class="fa-brands fa-snapchat"></i>
+        </div>
+      </section>
+
+      <style>
+        .item_box {
+          width: 300px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          align-content: center;
+          text-align: center;
+          padding: 10px;
+          flex-wrap: wrap;
+          gap: 2.2rem;
+          justify-content: space-around;
+          color: white;
+        }
+
+        .item_box i {
+          font-size: 3rem;
+        }
+      </style>
+
+      <section class="event_box">
+        <section class="con_section">
+          <h3>Upcoming Programs</h3>
+          <section class="program_box">
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/dot.jpg);"></div>
+              <p>
+                <strong style="color: black;">R&B mix</strong>
+                <small><i class="material-symbols-outlined">timer</i> 12:00 - 15:00 </small>
+                <small><i class="material-symbols-outlined">play_arrow</i> Latest Episode</small>
+              </p>
+              <div class="program_tag radio_tag">Live Now</div>
+            </div>
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/Illmatic\ Album\ Artwork.jpg);"></div>
+              <p>
+                <strong style="color: black;">Cools mix</strong>
+                <small><i class="material-symbols-outlined">timer</i> 15:00 - 18:00 </small>
+                <small><i class="material-symbols-outlined">play_arrow</i> Latest Episode</small>
+              </p>
+              <div class="program_tag radio_tag">Live Now</div>
+            </div>
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/drake.jpg);"></div>
+              <p>
+                <strong style="color: black;">Dancehall mix</strong>
+                <small><i class="material-symbols-outlined">timer</i> 18:00 - 21:00 </small>
+                <small><i class="material-symbols-outlined">play_arrow</i> Latest Episode</small>
+              </p>
+              <div class="program_tag radio_tag">Live Now</div>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <!-- <script>
+        for (var i = 0; i < 2; i++) {
+          document.querySelectorAll('.program_box')[0].appendChild(document.querySelector('.program').cloneNode(true))
+        }
+      </script> -->
+      <script>
+        let Lineup_tags = ['Up Next', 'Later', 'Still to come']
+        const radio_tags = document.querySelectorAll('.radio_tag')
+        radio_tags.forEach((radio, i) => {
+          radio.innerHTML = Lineup_tags[i]
+        })
+      </script>
+
+    </section>
+
+    <section class="news_box">
+      <section class="con">
+        <h3>Announcements</h3>
+        <div class="posts stack-container" max-width="840" min-width="205" gutter="10">
+          <div class="stack-card">
+            <i class="fa-solid fa-bullhorn program_tag"></i>
+            <img src="images/dot.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
+
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <i class="fa-solid fa-bullhorn program_tag"></i>
+            <img src="images/Illmatic Album Artwork.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+                and Violet Jiyane Junior Secondary (Carolina).
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <i class="fa-solid fa-bullhorn program_tag"></i>
+            <img src="images/drake.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <i class="fa-solid fa-bullhorn program_tag"></i>
+            <img src="images/kanye.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <i class="fa-solid fa-bullhorn program_tag"></i>
+            <img src="images/rema.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>
+                This #MandelaDay METRO FM will be renovating computer labs at Coronation Secondary School (Emalahleni)
+              </small>
+            </div>
+          </div>
+          <div class="stack-card">
+            <i class="fa-solid fa-bullhorn program_tag"></i>
+            <img src="images/drake.jpg">
+            <div class="header">
+              <div class="title">Trending</div>
+            </div>
+            <div class="content">
+              <small>Todays #BreakAwayNote with givenbaloyi_</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <style>
+      .news_box {
+        width: 70%;
+        padding: 2vh 15%;
+      }
+
+      .news_box .con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1.5rem 0;
+      }
+    </style>
+
+    <style>
+      .social_box {
+        padding: 3vh 15%;
+        display: flex;
+        justify-content: space-between;
+        gap: 0 5rem;
+      }
+
+      .social_box strong,
+      .con_section h3,
+      .con h3 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: white;
+        width: 100%;
+        border-bottom: 2px solid white;
+        padding: 5px 0;
+      }
+
+      .social_box .media_box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem 0;
+      }
+    </style>
+
+
+
+
+    <style>
+      .event_box {
+        width: 70%;
+      }
+
+      .con_section {
+        gap: 1rem 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .program_box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <section class="low_box">
+      <section class="con">
+        <section class="con_section">
+          <h3>Global Ghana News</h3>
+          <section class="program_box">
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/ford.webp);"></div>
+              <p>
+                <strong>Ford Competition</strong>
+                <span style="color: rgb(71, 71, 71);">
+                  Add the WOW!-factor to your winter: Enter the Clere WOW!-moment competition, right here on METRO FM
+                </span>
+                <small>Events | 20 Jun 2023</small>
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <section class="con_section">
+          <h3>Local Ghana News</h3>
+          <section class="program_box">
+            <div class="program">
+              <div class="img_box" style="background-image: url(images/home1.avif);"></div>
+              <p>
+                <strong>Ford Competition</strong>
+                <span style="color: rgb(71, 71, 71);">
+                  Add the WOW!-factor to your winter: Enter the Clere WOW!-moment competition, right here on METRO FM
+                </span>
+                <small>Events | 20 Jun 2023</small>
+              </p>
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    </section>
+
+
+
+  <style>
+    footer {
+      background: black;
+      color: white;
+      display: flex;
+      width: 90%;
+      padding: 3vh 5%;
+      flex-wrap: wrap;
+      gap: 0 5rem;
+    }
+    
+    footer h4 {
+      letter-spacing: 1px;
+    }
+    
+    footer section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    footer div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    footer div a {
+      color: white;
+    }
+  </style>
+
+
+  <style>
+    .low_box {
+      padding: 2vh 15%;
+    }
+
+    .low_box .con {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem 0;
+    }
+    </style>
+
+    <style>
+      @media all and (max-width:1600px) {
+
+        .top_nav,
+        .social_box,
+        .head_box,
+        .low_box,
+        .news_box,
+        .social_box {
+          width: 85%;
+          padding: 2.5vh 7.5%;
+        }
+
+        .news_box .con h3 {
+          width: 100%;
+        }
+      }
+
+      @media all and (max-width:1465px) {
+        .stack-card:last-child {
+          display: none;
+        }
+      }
+
+      @media all and (max-width:1450px) {
+        .event_box .program:nth-child(3) {
+          display: none;
+        }
+      }
+
+      @media all and (max-width:1350px) {
+
+        .top_nav,
+        .social_box,
+        .head_box,
+        .low_box,
+        .news_box,
+        .social_box {
+          width: 90%;
+          padding: 2.5vh 5%;
+        }
+      }
+
+      @media all and (max-width:1250px) {
+        .head_box .wrapper {
+          flex-direction: column;
+          gap: 2rem 0;
+        }
+
+        .next_box i {
+          rotate: 90deg;
+        }
+      }
+
+      @media all and (max-width:1225px) {
+        .stack-card:nth-child(5) {
+          display: none;
+        }
+      }
+
+      @media all and (max-width:985px) {
+        .stack-card:nth-child(4) {
+          display: none;
+        }
+      }
+
+      @media all and (max-width:1150px) {
+        .social_box {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem 0;
+        }
+
+        .item_box {
+          text-align: revert;
+          width: 100%;
+        }
+
+        .item_box i {
+          font-size: 2rem;
+        }
+
+        .event_box {
+          width: 100%;
+        }
+
+        .event_box .program:nth-child(3) {
+          display: flex;
+        }
+        footer {
+    justify-content: space-around;
+    gap: revert;
+  }
+      }
+
+      @media all and (max-width:950px) {
+
+        .social_box strong,
+        .con_section h3,
+        .con h3 {
+          text-align: center;
+        }
+
+        .low_box .con_section .program_box,
+        .event_box .program_box {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          gap: 2rem 0;
+          /* flex-direction: column; */
+        }
+      }
+
+      @media all and (max-width:800px) {
+        .top_nav div {
+          flex-wrap: wrap;
+        }
+
+        .top_nav,
+        .top_nav section {
+          flex-direction: column;
+
+          align-items: center;
+          gap: 1rem 0;
+        }
+
+        .head_box {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .head_box .wrapper {
+          margin: revert;
+          width: 100%;
+          gap: 1rem;
+        }
+
+        .head_box .wrapper .part {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .head_box .wrapper .part:nth-child(1) {
+          gap: 1rem 0;
+        }
+
+        .head_box .wrapper .part .logo_box_holder {
+          display: flex;
+          width: 100%;
+          gap: 0.5rem;
+          flex-direction: column;
+        }
+
+        .head_box .wrapper .part .logo_box_holder .logo_box {
+          border-radius: 10px;
+        }
+
+        .head_box .wrapper .part:nth-child(1) img {
+          position: revert;
+          height: 150px;
+        }
+      }
+
+      @media all and (max-width:500px) {
+        .head_box .wrapper .part .logo_box_holder .logo_box {
+          width: 80%;
+        }
+      }
+    </style>
+
+    <footer>
+      <section>
+        <h4>DISCOVER</h4>
+        <div>
+          <a href="">News</a>
+          <a href="">Sport</a>
+          <a href="">Education</a>
+          <a href="">TV Liscences</a>
+        </div>
+      </section>
+      <section>
+        <h4>TV</h4>
+        <div>
+          <a href="">S1</a>
+          <a href="">S2</a>
+          <a href="">S3</a>
+        </div>
+      </section>
+      <section>
+        <h4>RADIO</h4>
+        <div>
+          <a href="">Channel Africa</a>
+          <a href="">5 FM</a>
+          <a href="">Lotus FM</a>
+        </div>
+      </section>
+    </footer>
+  </section>
+</body>
+
+</html>
+<script src="js/index.js"></script>
+<script src="js/stackgrid.js"></script>

@@ -12,7 +12,7 @@ body {
 .stack-container {
     position: relative;
     margin: auto;
-    width: 80%;
+    width: 100%;
 }
 
 .stack-card {

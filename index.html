@@ -47,9 +47,7 @@
       <section>
         <img src="images/logo.png" alt="" id="logo">
         <div class="info_box">
-          <div class="img_box play_btn" id="play" style="background-image: url(images/drake.jpg);"
-            onclick="togglePlay()">
-            <audio src="tshego_choppin_ft_aka_raspy_official_audio_aac_40498.m4a" style="display: none;"></audio>
+          <div class="img_box" style="background-image: url(images/drake.jpg);">
             <div>
               <span class="bar_box">
                 <small></small>
@@ -127,6 +125,9 @@
         margin: 2rem 0;
       }
 
+
+
+
       .mid_nav section {
         display: flex;
         gap: 0 1rem;
@@ -194,7 +195,7 @@
       }
 
       @media all and (max-width:900px) {
-        .top_nav {
+        .top_nav{
           flex-direction: column;
           align-items: center;
           gap: 1rem 0;
@@ -202,11 +203,9 @@
           text-align: center;
           padding: 2vh 10%;
         }
-
-        .top_nav div a {
+        .top_nav div a{
           font-size: 0.9rem;
         }
-
         .mid_nav section {
           display: flex;
           flex-direction: column;
@@ -233,11 +232,10 @@
       }
 
       @media all and (max-width:600px) {
-        .top_nav {
+        .top_nav{
           width: 90%;
           padding: 2vh 5%;
         }
-
         .mid_nav {
           width: 90%;
           padding: 3vh 5%;
@@ -254,11 +252,12 @@
         }
 
         .mid_nav section .info_box {
+
           width: 100%;
         }
 
         .mid_nav .img_box {
-          width: 110%;
+          width: 80%;
           height: 250px;
         }
       }
@@ -288,38 +287,14 @@
               <div class="img_box" style="background-image: url(images/ford.webp);"></div>
               <p>
                 <strong>Ford Competition</strong>
-                <span class="program_text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae corrupti neque ullam libero
-                  quidem, officia quo exercitationem qui sed, molestias magni tempora quod cumque eligendi quae expedita
-                  porro quibusdam error?Add the WOW!-factor to your winter: Enter the Clere WOW!-moment competition,
-                  right here on METRO FM
+                <span style="color: rgb(71, 71, 71);">
+                  Add the WOW!-factor to your winter: Enter the Clere WOW!-moment competition, right here on METRO FM
                 </span>
                 <small>Competitions | 20 Jun 2023</small>
-                <span>
-                  <span>
-                    <i class="material-symbols-outlined">favorite</i> <small>4</small>
-                  </span>
-                  <i class="material-symbols-outlined">share</i>
-                </span>
               </p>
             </div>
           </section>
         </section>
-
-
-        <style>
-          .program_text {
-            display: inline-block;
-            color: rgb(74, 74, 74);
-            height: 65px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
-
-          .program p {
-            gap: 0.5rem 0;
-          }
-        </style>
 
         <section class="con_section">
           <h3>Podcasts</h3>
