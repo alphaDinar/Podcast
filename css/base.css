@@ -45,13 +45,7 @@ h1{
   font-weight: 400;
 }
 
-#logo {
-  height: 100px;
-  object-fit: contain;
-  aspect-ratio: 4/3;
-}
-
-div::-webkit-scrollbar ,section::-webkit-scrollbar{
+div::-webkit-scrollbar ,section::-webkit-scrollbar, p::-webkit-scrollbar{
   height: 10px;
   background: darkgray;
   cursor: pointer;
@@ -59,8 +53,7 @@ div::-webkit-scrollbar ,section::-webkit-scrollbar{
   width: 10px;
 }
 
-section::-webkit-scrollbar-thumb{
-
+div::-webkit-scrollbar-thumb ,section::-webkit-scrollbar-thumb, p::-webkit-scrollbar-thumb{
   background: white;
   border-radius: 100px;
 }

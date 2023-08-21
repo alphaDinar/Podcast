@@ -78,4 +78,4 @@ const stackGridWatchForResize = () => {
     }
 };
 
-setInterval(stackGridWatchForResize, 100);
+setInterval(stackGridWatchForResize, 10);

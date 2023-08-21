@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <title>Document</title>
+</head>
+
+<script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+<body>
+  <section class="page">
+    <section class="form_box">
+      <img src="images/logo.png" alt="">
+      <form method="post">
+        <div>
+          <span>Username</span>
+          <input type="text" name="username">
+        </div>
+        <div>
+          <span>Password</span>
+          <input type="password" name="password">
+        </div>
+        <button>Login</button>
+      </form>
+    </section>
+
+
+    <style>
+      .form_box {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5vh 0;
+        align-items: center;
+        width: 100%;
+      }
+
+      img {
+        width: 200px;
+      }
+      form, form div{
+        display: flex;
+        flex-direction: column;
+        /* align-items: flex-start; */
+      }
+      form{
+        gap: 2rem 0;
+        padding: 20px;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid wheat;
+      }
+      form div{
+        gap: 0.3rem 0;
+      }
+      form div span{
+        color: white;
+        font-size: 1.2rem;
+      }
+      
+      form div input{
+        width: 200px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        border: 1px solid darkgray;
+      }
+      form button{
+        padding: 8px 15px;
+        cursor: pointer;
+        width: 100px;
+        border-radius: 100px;
+        background: var(--var-theme);
+        color: white;
+        font-size: 1.1rem;
+      }
+    </style>
+
+  </section>
+</body>
+
+</html>

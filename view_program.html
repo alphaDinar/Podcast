@@ -13,8 +13,8 @@
     integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="css/base.css">
-
   <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/view_program.css">
   <title>Document</title>
 </head>
 
@@ -38,58 +38,43 @@
     <section class="display_box">
       <nav>
         <div>
+          <a href="" class="material-symbols-outlined back">chevron_left</a>
           <h3>Rap History</h3>
-          <i class="material-symbols-outlined">podcasts</i>
+          <i class="material-symbols-outlined">news</i>
         </div>
       </nav>
       <section class="display">
-        <div class="img_box"></div>
+        <div class="img_box" style="background-image: url(images/kanye.jpg);"></div>
         <div class="con">
-          <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius totam eos laborum, ratione voluptate illum, pariatur numquam nemo, voluptas fugiat molestias facilis consequatur deserunt dolorum consectetur facere aspernatur praesentium neque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae dolorem aliquid blanditiis eos vero dolorum iusto illo perferendis. Ipsum doloremque, obcaecati veritatis voluptatum tempore consequatur eligendi pariatur laborum recusandae!Lorem</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam
+            placeat maxime, magnam mollitia totam veniam! Laudantium similique explicabo molestiae quam, debitis dolorum
+            illum.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, harum. Unde soluta in eos quam fugit praesentium deserunt voluptas laboriosam, temporibus ratione ea? Fugit, aliquid debitis voluptatibus laudantium voluptas maxime.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestiae cumque voluptate laboriosam. Ipsum vel voluptas, beatae perspiciatis est voluptatum sit. Voluptatibus, ratione eaque? Aliquid consequuntur esse magni pariatur nisi?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eum inventore autem recusandae quibusdam expedita dolorum consequuntur, ex facere accusantium, exercitationem nisi maiores qui omnis amet molestias optio perspiciatis animi!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias eaque explicabo adipisci dolorum doloribus modi nobis excepturi? Magni alias iure perferendis repellat tenetur aut? Vel ipsa laboriosam atque perspiciatis illo?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptate, unde saepe facilis delectus ipsam. Sed recusandae veniam voluptate temporibus optio! Aperiam, natus corrupti repudiandae architecto corporis assumenda iusto harum.
+
+          </p>
         </div>
+      </section>
+    </section>
+
+    <section class="related_box">
+      <h3>Related News</h3>
+
+      <section class="relateds">
+        {% for item in programs  %}  
+        <div class="related" style="background-image: url({{item.thumb.url}});">
+          <p>
+            <span>{{item}}</span>
+          </p>
+        </div>
+        {% endfor %}
       </section>
     </section>
   </section>
 </body>
 
 </html>
-
-<style>
-  .display_box{
-    width: 90%;
-    padding: 0 5%;
-  }
-  .img_box{
-    width: 800px;
-    height: 500px;
-    background-image: url(images/Illmatic\ Album\ Artwork.jpg);
-    background-position: center;
-    background-size: cover;
-  }
-  .display{
-    border: 2px solid gold;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-  }
-  .display .con p{
-    color: white;
-    /* font-size: 1.1rem; */
-  }
-  .display_box nav{
-    min-height: 5vh;
-    display: flex;
-    align-items: center;
-    color: white;
-    width: 100%;
-  }
-  .display_box nav div{
-    display: flex;
-    align-items: center;
-    gap: 0 0.5rem;
-  }
-  .display_box nav div h3{
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-</style>
